@@ -10,8 +10,10 @@
   --business: #3447f0;
   --shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   --personal: var(--primary);
+  --purple: purple;
   --business-glow: 0px 0px 4px rgba( 58, 130, 230, 0.75);
   --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+  --purle-glow: 0px 0px 4px rgba(135, 1, 79, 0.896);
   --font: 1.2em;
 }
 
@@ -20,6 +22,24 @@
   justify-content: center;
   padding: 7px;
   word-spacing: 5px;
+}
+.page-container .app-cont {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--purple);
+  border-radius: 3px;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+.page-container .app {
+  width: 70%;
+  background-color: lightgrey;
+  border: unset;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .page-container .toDo-container {
   width: 900px;
@@ -132,12 +152,12 @@
   display: block;
   width: 100%;
   text-align: center;
-  background-color: var(--business);
+  background-color: var(--purple);
   padding: 1rem 1.2rem;
   color: #ffdfff;
   font-size: 1.2rem;
   border-radius: 0.5rem;
-  box-shadow: var(--business-glow);
+  box-shadow: var(--purle-glow);
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }

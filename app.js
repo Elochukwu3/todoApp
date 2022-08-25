@@ -60,3 +60,33 @@
 // //   localStorage.clear(list);
 // //   list.remove();
 // //   })
+
+window.addEventListener("load", ()=>{
+    let todos = JSON.parse(localStorage.getItem("todos")) || [];
+    console.log(todos);
+    let name = document.querySelector(".name")
+      let username = localStorage.getItem("username") || "";
+      username = name.value;
+    //   console.log(username);
+      name.addEventListener("change", (e)=>{
+     localStorage.setItem("username", e.target.value)
+      })
+      let formInput = document.querySelector("#todo-form");
+      formInput.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        // console.log(e.target);
+        const todo = {
+            content: e.target.elements.content.value,
+            category: e.target.elements.category.value,
+            done: false,
+        }
+        todos.push(todo)
+        localStorage.setItem("todos", JSON.stringify(todos))
+        e.target.reset()
+        displayTodos();
+      })
+      displayTodos()
+      function displayTodos() {
+        
+      }
+})
