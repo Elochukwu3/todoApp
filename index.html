@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="toDo-container">
+            <section class="input-name-sect">
+                <h2>What's up,
+                </h2>
+                <input type="text" placeholder="Name here" class="name">
+            </section>
+            <div class="create-todo">
+                <p>CREATE TODO</p>
+            </div>
+            <form id="todo-form">
+                <div class="what-on-todo">
+                    <div class="on-todo-text">
+                        What's on your todo?
+                    </div>
+                    <div class="ontodo-inpt-Container">
+                        <input type="text" name="on-todo-input" placeholder="e.g. Get some milk" class="ontodo-InputTag">
+                    </div>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="radio" name="category" id="category1" value="business">
+                        <span class="bubble business"></span>
+                        <div>Business</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" id="category2" value="Personal">
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>
+                    </label>
+                </div>
+                <div class="add-btn-cont">
+                    <button id="add-btn">ADD TODO</button>
+                </div>
+            </form>
+            <div class="todo-list-contain">
+                <h3>ToDo List</h3>
+                <!-- <div class="business-personal">
+                    <div class="business-item done">
+                        <label for="">
+                            <input type="checkbox">
+                            <span class="bubble business"></span>
+                        </label>
+                        <div class="todo-content">
+
+                            <input type="text" value="make a video, dance and make fun agaahah" readonly>
+                        </div>
+                        <div class="todo-btn-cont">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                    <div class="business-item done">
+                        <label for="">
+                            <input type="checkbox">
+                            <span class="bubble personal"></span>
+                        </label>
+                        <div class="todo-content">
+
+                            <input type="text" value="make a video" readonly>
+                        </div>
+                        <div class="todo-btn-cont">
+                            <button class=" edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

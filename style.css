@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  list-style-type: decimal;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #EA4DA4;
+  --business: #3447f0;
+  --shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  --personal: var(--primary);
+  --business-glow: 0px 0px 4px rgba( 58, 130, 230, 0.75);
+  --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+  --font: 1.2em;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+  word-spacing: 5px;
+}
+.page-container .toDo-container {
+  width: 900px;
+}
+.page-container .input-name-sect {
+  display: flex;
+  align-items: center;
+}
+.page-container .name {
+  font-size: 1.1rem;
+  padding-left: 1rem;
+}
+.page-container input:not([type=radio]):not([type=checkbox]), .page-container button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: unset;
+  background: none;
+  cursor: initial;
+}
+.page-container .todo-list-contain h3 {
+  opacity: 0.5;
+}
+.page-container .create-todo p {
+  font-size: 1rem;
+  opacity: 0.7;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.page-container .on-todo-text {
+  margin: 9px 0 7px 0;
+  opacity: 0.6;
+}
+.page-container .ontodo-inpt-Container {
+  width: 100%;
+}
+.page-container .ontodo-InputTag {
+  display: block;
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.8rem 1.5rem;
+  color: #000;
+  background-color: #ffdfff;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+  overflow-x: scroll;
+}
+.page-container .option {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.page-container .option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.2rem;
+  border-radius: 0.5rem;
+  background: white;
+  box-shadow: var(--shadow);
+}
+.page-container input[type=radio], .page-container input[type=checkbox] {
+  display: none;
+}
+.page-container .bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--business);
+  box-shadow: var(--business-glow);
+}
+.page-container .bubble.personal {
+  border-color: var(--personal);
+  box-shadow: var(--personal-glow);
+}
+.page-container .bubble::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  background: var(--business);
+  box-shadow: var(--business-glow);
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+.page-container .bubble.personal::after {
+  background: var(--primary);
+  box-shadow: var(--personal-glow);
+}
+.page-container input:checked ~ .bubble::after {
+  width: 11px;
+  height: 11px;
+  opacity: 1;
+}
+.page-container .add-btn-cont {
+  display: grid;
+  justify-self: center;
+  width: 100%;
+}
+.page-container #add-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: var(--business);
+  padding: 1rem 1.2rem;
+  color: #ffdfff;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--business-glow);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.page-container #add-btn:hover {
+  opacity: 0.78;
+  font-size: 1.1rem;
+}
+.page-container .business-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+.page-container .business-item label {
+  margin-right: 0.7rem;
+}
+.page-container .todo-content {
+  flex: 1 1 0%;
+}
+.page-container .todo-btn-cont {
+  display: flex;
+  align-items: center;
+}
+.page-container .edit, .page-container .delete {
+  display: block;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.page-container .edit {
+  background-color: var(--business);
+  margin-right: 0.4rem;
+}
+.page-container .delete {
+  background: red;
+}
+.page-container .business-item.done .todo-content input {
+  text-decoration: line-through;
+  color: gray;
+}/*# sourceMappingURL=style.css.map */
