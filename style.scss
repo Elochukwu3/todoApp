@@ -191,6 +191,7 @@
         transition: 0.2s ease-in-out;
         font-weight: 400;
         font-size: 1rem;
+        text-transform: uppercase;
     }
     .edit{
         background-color: var(--business);
@@ -202,5 +203,8 @@
     .business-item.done .todo-content input{
         text-decoration: line-through;
         color: gray;
+    }
+    .inputItem{
+        // color: red;
     }
 }
