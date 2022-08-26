@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+  const errorMsg = document.querySelector(".error")
   todos = [] || JSON.parse(localStorage.getItem("todos"));
   let name = document.querySelector(".name");
   let username = localStorage.getItem("username") || "";
@@ -14,10 +15,16 @@ window.addEventListener("load", () => {
       category: e.target.elements.category.value,
       done: false,
     };
+   if (todo.content == "") {
+    errorMsg.classList.add("show")
+   }else{
+    errorMsg.classList.remove("show")
     todos.push(todo);
     localStorage.setItem("todos", JSON.stringify(todos));
     e.target.reset();
     displayTodos();
+   }
+   displayTodos()
   });
 });
 
