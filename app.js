@@ -1,13 +1,9 @@
-
-
 window.addEventListener("load", () => {
   todos = [] || JSON.parse(localStorage.getItem("todos"));
-
-
   let name = document.querySelector(".name");
   let username = localStorage.getItem("username") || "";
   username = name.value;
-    name.addEventListener("change", (e) => {
+  name.addEventListener("change", (e) => {
     localStorage.setItem("username", e.target.value);
   });
   let formInput = document.querySelector("#todo-form");
@@ -24,7 +20,8 @@ window.addEventListener("load", () => {
     displayTodos();
   });
 });
-// displayTodos()
+
+
 function displayTodos() {
   const todoList = document.querySelector(".business-personal");
   todoList.innerHTML = "";
@@ -71,11 +68,9 @@ function displayTodos() {
       } else {
         todoItem.classList.remove("done");
       }
-    
     });
 
     edit.addEventListener("click", (e) => {
-
       const replaceValue = content.querySelector("input");
       replaceValue.removeAttribute("readonly");
       replaceValue.focus();
@@ -85,17 +80,16 @@ function displayTodos() {
         localStorage.setItem("todos", JSON.stringify(todos));
       });
     });
-    
+
     deleteBtn.addEventListener("click", () => {
       todos = todos.filter((f) => {
-      //  here im am returning each array object that is not equal to the local storage
-      return  f != td;
-        
+        //  here im am returning each array object that is not equal to the local storage
+        return f != td;
       });
-  
+
       localStorage.setItem("todos", JSON.stringify(todos));
       displayTodos();
     });
   });
 }
-// console.clear()
+
