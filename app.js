@@ -14,7 +14,9 @@ window.addEventListener("load", () => {
       content: e.target.elements.content.value,
       category: e.target.elements.category.value,
       done: false,
+      createdAt: new Date().getTime()
     };
+    console.log(todo.createdAt);
    if (todo.content == "") {
     errorMsg.classList.add("show")
    }else{
@@ -33,7 +35,7 @@ function displayTodos() {
   const todoList = document.querySelector(".business-personal");
   todoList.innerHTML = "";
 
-  todos.forEach((td) => {
+  todos.sort(todos.createdAt).forEach((td) => {
     const todoItem = document.createElement("div");
     todoItem.classList.add("business-item");
     const label = document.createElement("label");
